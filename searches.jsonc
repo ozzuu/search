@@ -4,19 +4,19 @@
     "links": {
       "Duckduckgo html": {
         "url": "https://html.duckduckgo.com/html/?q=%s",
-        // "short": ""
+        "short": "d"
       },
       "Duckduckgo": {
         "url": "https://duckduckgo.com/?q=%s",
-        // "short": ""
+        "short": "ddg"
       },
       "Google": {
         "url": "https://www.google.com/search?q=%s",
-        // "short": ""
+        "short": "g"
       },
       "Metager": {
         "url": "https://metager.org/meta/meta.ger3?eingabe=%s",
-        // "short": ""
+        "short": "m"
       },
     }
   },
@@ -25,27 +25,27 @@
     "links": {
       "Github": {
         "url": "https://github.com/search?q=%s",
-        // "short": ""
+        "short": "gh"
       },
       "Gitlab": {
         "url": "https://gitlab.com/search?search_code=true&search=%s",
-        // "short": ""
+        "short": "gl"
       },
       "Launchpad": {
         "url": "https://launchpad.net/+search?field.text=%s",
-        // "short": ""
+        "short": "lp"
       },
       "Notabug": {
         "url": "https://notabug.org/explore/repos?q=%s",
-        // "short": ""
+        "short": "nab"
       },
       "Codeberg": {
         "url": "https://codeberg.org/explore/repos?tab=&sort=recentupdate&q=%s",
-        // "short": ""
+        "short": "cb"
       },
       "StackOverflow": {
         "url": "https://stackoverflow.com/search?q=%s",
-        // "short": ""
+        "short": "so"
       },
     }
   },
@@ -54,39 +54,39 @@
     "links": {
       "Piped": {
         "url": "https://piped.kavin.rocks/results?search_query=%s",
-        // "short": ""
+        "short": "pi"
       },
       "invidious": {
         "url": "https://invidious.kavin.rocks/search?q=%s",
-        // "short": ""
+        "short": "iv"
       },
       "Youtube": {
         "url": "https://www.youtube.com/results?search_query=%s",
-        // "short": ""
+        "short": "yt"
       },
       "DTube": {
         "url": "https://d.tube/#!/s/%s",
-        // "short": ""
+        "short": "dt"
       },
       "Rumble": {
         "url": "https://rumble.com/search/video?q=%s",
-        // "short": ""
+        "short": "rb"
       },
       "Vimeo": {
         "url": "https://vimeo.com/search?q=%s",
-        // "short": ""
+        "short": "vm"
       },
       "DailyMotion": {
         "url": "https://www.dailymotion.com/search/%s/videos",
-        // "short": ""
+        "short": "dm"
       },
       "BitChute": {
         "url": "https://www.bitchute.com/search/?query=%s",
-        // "short": ""
+        "short": "bc"
       },
       "Odysee": {
         "url": "https://odysee.com/$/search?q=%s",
-        // "short": ""
+        "short": "oe"
       },
     }
   },
@@ -95,7 +95,7 @@
     "links": {
       "Reddit": {
         "url": "https://www.reddit.com/search/?q=%s",
-        // "short": ""
+        "short": "rd"
       },
     }
   },
@@ -104,7 +104,7 @@
     "links": {
       "Wikipedia": {
         "url": "https://wikipedia.org/w/?search=%s&fulltext=Search",
-        // "short": ""
+        "short": "wp"
       },
     }
   },
@@ -113,7 +113,7 @@
     "links": {
       "Desciclopedia": {
         "url": "https://desciclopedia.org/index.php?search=%s&title=Especial%3ABusca&go=Ir",
-        // "short": ""
+        "short": "dp"
       },
     }
   },
@@ -122,7 +122,7 @@
     "links": {
       "Google Translate": {
         "url": "https://translate.google.com/?sl=auto&tl=en&text=%s&op=translate",
-        // "short": ""
+        "short": "gt"
       },
     }
   },
@@ -131,96 +131,96 @@
     "links": {
       "Zoom": {
         "url": "https://www.zoom.com.br/search?q=%s",
-        // "short": ""
+        "short": "zo"
       },
       "Buscape": {
         "url": "https://www.buscape.com.br/search?q=%s",
-        // "short": ""
+        "short": "bu"
       },
-      "Google shopping": {
+      "Google Shopping": {
         "url": "https://www.google.com/search?q=%s&tbm=shop",
-        // "short": ""
+        "short": "gs"
       },
     }
   },
   {
-    "name": "National shops",
+    "name": "Brazil shops",
     "links": {
-      "Mercadolivre": {
+      "MercadoLivre": {
         "url": "https://lista.mercadolivre.com.br/%s",
-        // "short": ""
+        "short": "ml"
       },
       "Shopee": {
         "url": "https://shopee.com.br/search?keyword=%s",
-        // "short": ""
+        "short": "sh"
       },
       "OLX": {
         "url": "https://www.olx.com.br/brasil?q=%s",
-        // "short": ""
+        "short": "olx"
       },
       "Tenda atacado": {
         "url": "https://www.tendaatacado.com.br/busca?q=%s",
-        // "short": ""
+        "short": "ta"
       },
       "Madeira Madeira": {
         "url": "https://www.madeiramadeira.com.br/busca?q=%s",
-        // "short": ""
+        "short": "mm"
       },
       "Casas Bahia": {
         "url": "https://buscas.casasbahia.com.br/?strBusca=%s",
-        // "short": ""
+        "short": "cb"
       },
       "Pontofrio": {
         "url": "https://www.pontofrio.com.br/%s/b",
-        // "short": ""
+        "short": "pf"
       },
       "Extra": {
         "url": "https://www.extra.com.br/%s/b",
-        // "short": ""
+        "short": "ex"
       },
       "MagazineLuiza": {
         "url": "https://www.magazineluiza.com.br/busca/%s/",
-        // "short": ""
+        "short": "mg"
       },
       "Carrefour": {
         "url": "https://www.carrefour.com.br/busca/%s",
-        // "short": ""
+        "short": "cf"
       },
       "Spani": {
         "url": "https://www.spanionline.com.br/buscas?q=%s",
-        // "short": ""
+        "short": "sp"
       },
       "Kabum": {
         "url": "https://www.kabum.com.br/busca?query=%s",
-        // "short": ""
+        "short": "kb"
       },
       "FastShop": {
         "url": "https://www.fastshop.com.br/web/s/%s",
-        // "short": ""
+        "short": "fs"
       },
       "Amazon BR": {
         "url": "https://www.amazon.com.br/s/?field-keywords=%s",
-        // "short": ""
+        "short": "ambr"
       },
       "Enjoei": {
         "url": "https://www.enjoei.com.br/s?q=%s",
-        // "short": ""
+        "short": "ej"
       },
       "Submarino": {
         "url": "https://www.submarino.com.br/busca/%s",
-        // "short": ""
+        "short": "sm"
       },
       "Americanas": {
         "url": "https://www.americanas.com.br/busca/%s/",
-        // "short": ""
+        "short": "am"
       },
       "Shoptime": {
         "url": "https://www.shoptime.com.br/busca/%s/",
-        // "short": ""
+        "short": "st"
       },
       "Soubarato": {
         "url": "https://www.soubarato.com.br/busca/%s/",
-        // "short": ""
+        "short": "sb"
       },
     }
   },
@@ -229,23 +229,23 @@
     "links": {
       "Banggood": {
         "url": "https://br.banggood.com/search/%s.html",
-        // "short": ""
+        "short": "bg"
       },
       "Amazon": {
         "url": "https://www.amazon.com/s/?field-keywords=%s",
-        // "short": ""
+        "short": "am"
       },
       "Ebay": {
         "url": "https://www.ebay.com/sch/i.html?_nkw=%s",
-        // "short": ""
+        "short": "eb"
       },
       "Aliexpress": {
         "url": "https://www.aliexpress.com/wholesale?SearchText=%s",
-        // "short": ""
+        "short": "ae"
       },
       "Gearbest": {
         "url": "https://www.gearbest.com/sale/%s/",
-        // "short": ""
+        "short": "gb"
       },
     }
   },
@@ -254,7 +254,7 @@
     "links": {
       "Letras": {
         "url": "https://www.letras.mus.br/?q=%s",
-        // "short": ""
+        "short": "lt"
       },
     }
   },
@@ -263,19 +263,19 @@
     "links": {
       "BluesoftCosmos": {
         "url": "https://cosmos.bluesoft.com.br/pesquisar?utf8=%E2%9C%93&q=%s",
-        // "short": ""
+        "short": "bc"
       },
-      "RastreamentoCorreio": {
+      "Rastreamento Correio": {
         "url": "https://rastreamentocorreios.info/consulta/%s",
-        // "short": ""
+        "short": "rc"
       },
       "Chrome Webstore": {
         "url": "https://chrome.google.com/webstore/search/%s",
-        // "short": ""
+        "short": "cw"
       },
       "Google Maps": {
         "url": "https://www.google.com/maps/search/%s",
-        // "short": ""
+        "short": "gm"
       },
     }
   },
@@ -284,7 +284,7 @@
     "links": {
       "ResearchGate": {
         "url": "https://www.researchgate.net/search?q=%s",
-        // "short": ""
+        "short": "rg"
       },
     }
   },
@@ -293,16 +293,7 @@
     "links": {
       "Patreon": {
         "url": "https://www.patreon.com/search?q=%s",
-        // "short": ""
-      },
-    }
-  },
-  {
-    "name": "Notegroup",
-    "links": {
-      "Go to group": {
-        "url": "https://saprodu.com/oxyoy.com/nonwww/notegroup/index.php?group=%s",
-        // "short": ""
+        "short": "pt"
       },
     }
   },
@@ -311,14 +302,17 @@
     "links": {
       "DomainTools Whois": {
         "url": "https://whois.domaintools.com/%s",
-        // "short": ""
+        "short": "dtw"
       },
     }
   },
   {
     "name": "Onion",
     "links": {
-      "Imperial Library": "http://kx5thpx2olielkihfyo4jgjqfb7zx7wxr3sd4xzt26ochei4m6f7tayd.onion/search/?q=%s",
+      "Imperial Library": {
+        "url": "http://kx5thpx2olielkihfyo4jgjqfb7zx7wxr3sd4xzt26ochei4m6f7tayd.onion/search/?q=%s",
+        "short": "il"
+      }
     }
   },
   {
@@ -326,11 +320,11 @@
     "links": {
       "Wayback - search": {
         "url": "https://web.archive.org/web/*/%s",
-        // "short": ""
+        "short": "wbs"
       },
       "Wayback - save page": {
         "url": "https://web.archive.org/save/%s",
-        // "short": ""
+        "short": "wbsp"
       },
     }
   },

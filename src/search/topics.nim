@@ -3,7 +3,8 @@ from std/json import parseJson, to, getStr, `{}`, pairs, items
 type
   SearchTopic* = object
     name*: string
-    links*: seq[tuple[name: string; data: SearchLink]]
+    links*: seq[SearchTopicLink]
+  SearchTopicLink* = tuple[name: string; data: SearchLink]
   SearchLink* = object
     url*, short*: string
   SearchTopics* = seq[SearchTopic]

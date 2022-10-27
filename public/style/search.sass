@@ -1,0 +1,74 @@
+:root
+  --border-radius: 1em
+  
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+#ROOT  
+  min-height: 100vh
+  
+.main
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  header
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    transition: .3s
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 14em
+    align-items: center
+
+    h1
+      text-align: center
+      font-size: 3.4em
+      width: 100vw
+    .input
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      transition: .3s !important
+      width: 20em
+      *
+        padding: .5em
+        margin: .5em
+        height: 3em
+        border: 0
+
+    &.top
+      .input
+        width: 90vw
+      top: 5em
+      height: 10em
+
+  .topics
+    margin-top: 10em
+    position: relative
+    display: flex
+    flex-direction: column
+    transition: .5s
+    overflow: hidden
+    &.hidden
+      transform: translateY(101%)
+      height: 0
+    .topic
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+      h2
+        color: var(--color-text-secondary)
+      a
+        margin: .2em
+        b
+          padding: 1em
