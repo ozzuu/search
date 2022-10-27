@@ -16,6 +16,7 @@ when searchesJson.len == 0:
 
 proc loadSearchTopics*: SearchTopics {.compileTime.} =
   ## Loads all search methods from a JSON
+  var usedShorts: seq[string]
   let node = parseJson readFile searchesJson
   for topic in node:
     var top = SearchTopic(
@@ -26,5 +27,11 @@ proc loadSearchTopics*: SearchTopics {.compileTime.} =
         url: obj{"url"}.getStr,
         short: obj{"short"}.getStr,
       )
+      if data.short in usedShorts:
+        echo "The short of '" & name & "' duplicated"
+        quit 1
+      else:
+        usedShorts.add data.short
+
       top.links.add (name, data)
     result.add top

@@ -82,7 +82,7 @@
       },
       "BitChute": {
         "url": "https://www.bitchute.com/search/?query=%s",
-        "short": "bc"
+        "short": "bit"
       },
       "Odysee": {
         "url": "https://odysee.com/$/search?q=%s",
@@ -168,7 +168,7 @@
       },
       "Casas Bahia": {
         "url": "https://buscas.casasbahia.com.br/?strBusca=%s",
-        "short": "cb"
+        "short": "cbh"
       },
       "Pontofrio": {
         "url": "https://www.pontofrio.com.br/%s/b",
@@ -212,7 +212,7 @@
       },
       "Americanas": {
         "url": "https://www.americanas.com.br/busca/%s/",
-        "short": "am"
+        "short": "ame"
       },
       "Shoptime": {
         "url": "https://www.shoptime.com.br/busca/%s/",
