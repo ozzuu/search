@@ -17,4 +17,4 @@ requires "karax"
 requires "util"
 
 task buildRelease, "Builds the release version":
-  exec "nimble -d:release build"
+  exec "nimble -d:danger --opt:speed build"
