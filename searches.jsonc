@@ -43,6 +43,10 @@
         "url": "https://codeberg.org/explore/repos?tab=&sort=recentupdate&q=%s",
         "short": "cb"
       },
+      "Ozzuu Git": {
+        "url": "https://git.ozzuu.com/explore/repos?sort=recentupdate&language=&q=%s",
+        "short": "og"
+      },
       "StackOverflow": {
         "url": "https://stackoverflow.com/search?q=%s",
         "short": "so"
@@ -276,6 +280,10 @@
       "Google Maps": {
         "url": "https://www.google.com/maps/search/%s",
         "short": "gm"
+      },
+      "Situação Cadastral": {
+        "url": "https://www.situacaocadastral.info/cnpj/%s",
+        "short": "sc"
       },
     }
   },

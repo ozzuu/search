@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.2.1"
+version       = "0.3.0"
 author        = "Thiago Navarro"
 description   = "Open source, secure and privacy friendly meta search portal"
 license       = "MIT"

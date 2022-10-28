@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.3.0 (Oct 28, 2022)
+
+- Added more search buttons
+
+---
+
 ## Version 0.2.1 (Oct 27, 2022)
 
 - Added duplicated short verification
