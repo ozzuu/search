@@ -9,9 +9,11 @@ include karax/prelude
 
 from pkg/util/forHtml import genClass
 
-from search/topics import loadSearchTopics, SearchTopicLink
+from search/topics import loadConfig, SearchTopicLink
 
-const searches = loadSearchTopics()
+const config = loadConfig()
+
+var defaultCancelled = false
 
 template searchTerm: string =
   if window.location.hash.len > 0:
@@ -30,6 +32,7 @@ proc gotoUrl(url: string; target = "") =
 
 proc drawSearchPage(): VNode =
   result = buildHtml(main(class = "main")):
+    style: text ":root{--default-delay: " & $config.default.delay & "ms;}"
     header(class = genClass({"top": searchTerm.len > 0})):
       h1: text "Ozzuu Search"
       tdiv(class = "input"):
@@ -37,7 +40,7 @@ proc drawSearchPage(): VNode =
           proc onInput(ev: Event; n: VNode) =
             window.location.hash = cstring n.value
     section(class = genClass({"topics": true, "hidden": searchTerm.len == 0})):
-      for topic in searches:
+      for topic in config.searches:
         tdiv(class = "topic"):
           h2(class = "title"): text topic.name
           section(class = "searches"):
@@ -46,18 +49,47 @@ proc drawSearchPage(): VNode =
                 a(
                   href = data.url.query searchTerm,
                   `aria-label` = data.short,
-                  `data-balloon-pos` = "up"
+                  `data-balloon-pos` = "up",
                 ):
-                  bold: text name
+                  bold(class = genClass({
+                    "default": config.default.short == data.short,
+                    "cancelled": defaultCancelled
+                  })):
+                    text name
               else:
                 a(href = data.url.query searchTerm):
                   bold: text name
         hr()
 
-proc drawAutoShort(search: string; link: SearchTopicLink): () -> VNode =
+proc drawAutoShort(search: string; data: SearchTopicLink): () -> VNode =
   result = proc: VNode =
     result = buildHtml(main(class = "main")):
-      h1: text fmt"Searching '{search}' in {link.name}"
+      h1: text fmt"Searching '{search}' in {data.name}"
+
+func getSearch(short: string): SearchTopicLink =
+  for topic in config.searches:
+    for (name, data) in topic.links:
+      if data.short == short:
+        return (name, data)
+
+proc defaultRedirect =
+  if config.default.delay > 0:
+    let term = searchTerm
+    if term.len > 0:
+      let srx = config.default.short.getSearch
+      if srx.name.len > 0:
+        let timeout = setTimeout((proc() =
+          gotoUrl srx.data.url.query term
+        ), config.default.delay)
+        let cancelProc = proc(ev: Event) =
+          document.onclick = nil
+          document.onmousemove = nil
+          defaultCancelled = true
+          redraw()
+          clearTimeout timeout
+
+        document.onclick = cancelProc
+        document.onmousemove = cancelProc
 
 when isMainModule:
   block autoShort:
@@ -67,12 +99,13 @@ when isMainModule:
         parts = term.strip.split " "
         search = parts[1..^1].join " "
         short = parts[0]
-      for topic in searches:
-        for (name, data) in topic.links:
-          if data.short == short:
-            setRenderer drawAutoShort(search, (name, data))
-            window.location.hash = search
-            gotoUrl data.url.query search
-            quit 0
+      let srx = short.getSearch
+      if srx.name.len > 0:
+        setRenderer drawAutoShort(search, srx)
+        window.location.hash = search
+        gotoUrl srx.data.url.query search
+        quit 0
 
   setRenderer drawSearchPage
+  
+  defaultRedirect()

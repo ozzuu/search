@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.0.0 (Oct 30, 2022)
+
+- Added default redirect in specified delay, when mouse moves, it cancels
+- Added same color scheme of https://thisago.co
+
+---
+
 ## Version 0.3.0 (Oct 28, 2022)
 
 - Added more search buttons

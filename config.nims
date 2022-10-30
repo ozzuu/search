@@ -1,1 +1,1 @@
-switch("define", "searchesJson=searches.jsonc")
+switch("define", "configJson=config.jsonc")

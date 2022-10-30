@@ -1,3 +1,5 @@
+@use "partials/colors"
+  
 :root
   --border-radius: 1em
   
@@ -38,6 +40,8 @@
       justify-content: center
       transition: .3s !important
       width: 20em
+      input
+        background: colors.$colorText
       *
         padding: .5em
         margin: .5em
@@ -71,4 +75,27 @@
       a
         margin: .2em
         b
+          transition: .5s
           padding: 1em
+          @keyframes defaultRedirect
+            from
+              width: 0%
+            to
+              width: 100%
+          &::before
+            border-radius: var(--border-radius)
+            transition: 1s
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: .2em
+            animation: defaultRedirect var(--default-delay) linear
+            animation-play-state: paused
+
+          &.default:not(.cancelled)
+            background: colors.$colorSecondary
+            &::before
+              background: colors.$colorSecondary
+              animation-play-state: running

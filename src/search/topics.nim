@@ -1,6 +1,9 @@
-from std/json import parseJson, to, getStr, `{}`, pairs, items
+from std/json import parseJson, to, getStr, `{}`, pairs, items, getInt
 
 type
+  Config* = object
+    default*: DefaultSearch
+    searches*: SearchTopics
   SearchTopic* = object
     name*: string
     links*: seq[SearchTopicLink]
@@ -8,30 +11,36 @@ type
   SearchLink* = object
     url*, short*: string
   SearchTopics* = seq[SearchTopic]
+  DefaultSearch* = object
+    short*: string
+    delay*: int # in ms; negative to disable
 
-const searchesJson {.strdefine.} = ""
+const configJson {.strdefine.} = ""
 
-when searchesJson.len == 0:
-  {.error: "Provide the searches.json".}
+when configJson.len == 0:
+  {.error: "Provide the config.json".}
 
-proc loadSearchTopics*: SearchTopics {.compileTime.} =
+proc loadConfig*: Config {.compileTime.} =
   ## Loads all search methods from a JSON
-  var usedShorts: seq[string]
-  let node = parseJson readFile searchesJson
-  for topic in node:
-    var top = SearchTopic(
-      name: topic{"name"}.getStr
-    )
-    for (name, obj) in topic{"links"}.pairs:
-      let data = SearchLink(
-        url: obj{"url"}.getStr,
-        short: obj{"short"}.getStr,
+  let node = parseJson readFile configJson
+  result.default.short = node{"default", "short"}.getStr
+  result.default.delay = node{"default", "delay"}.getInt -1
+  block searches:
+    var usedShorts: seq[string]
+    for topic in node{"searches"}:
+      var top = SearchTopic(
+        name: topic{"name"}.getStr
       )
-      if data.short in usedShorts:
-        echo "The short of '" & name & "' duplicated"
-        quit 1
-      else:
-        usedShorts.add data.short
+      for (name, obj) in topic{"links"}.pairs:
+        let data = SearchLink(
+          url: obj{"url"}.getStr,
+          short: obj{"short"}.getStr,
+        )
+        if data.short in usedShorts:
+          echo "The short of '" & name & "' duplicated"
+          quit 1
+        else:
+          usedShorts.add data.short
 
-      top.links.add (name, data)
-    result.add top
+        top.links.add (name, data)
+      result.searches.add top
