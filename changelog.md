@@ -1,5 +1,16 @@
 # Changelog
 
+## Version 1.1.0 (Nov 1, 2022)
+
+- Added searches:
+  - Gibiru
+  - Qwant Lite
+  - Swisscows
+  - Searx redirect
+- Fixed `defaultCancelled` when no text was provided
+
+---
+
 ## Version 1.0.0 (Oct 30, 2022)
 
 - Added default redirect in specified delay, when mouse moves, it cancels

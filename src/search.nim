@@ -13,13 +13,14 @@ from search/topics import loadConfig, SearchTopicLink
 
 const config = loadConfig()
 
-var defaultCancelled = false
 
 template searchTerm: string =
   if window.location.hash.len > 0:
     window.location.hash.`$`[1..^1].decodeUrl
   else:
     ""
+
+var defaultCancelled = searchTerm.len == 0
 
 proc query(url, term: string): string =
   url.replace("%s", encodeUrl term)
@@ -45,20 +46,21 @@ proc drawSearchPage(): VNode =
           h2(class = "title"): text topic.name
           section(class = "searches"):
             for (name, data) in topic.links:
+              proc b: VNode =
+                buildHtml(bold(class = genClass({
+                  "default": config.default.short == data.short,
+                  "cancelled": defaultCancelled
+                }))):
+                  text name
+
               if data.short.len > 0:
                 a(
                   href = data.url.query searchTerm,
                   `aria-label` = data.short,
                   `data-balloon-pos` = "up",
-                ):
-                  bold(class = genClass({
-                    "default": config.default.short == data.short,
-                    "cancelled": defaultCancelled
-                  })):
-                    text name
+                ): b()
               else:
-                a(href = data.url.query searchTerm):
-                  bold: text name
+                a(href = data.url.query searchTerm): b()
         hr()
 
 proc drawAutoShort(search: string; data: SearchTopicLink): () -> VNode =

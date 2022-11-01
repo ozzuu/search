@@ -1,6 +1,6 @@
 {
   "default": {
-    "short": "d",
+    "short": "ql",
     "delay": 2000
   },
   "searches": [
@@ -22,6 +22,22 @@
         "Metager": {
           "url": "https://metager.org/meta/meta.ger3?eingabe=%s",
           "short": "m"
+        },
+        "Gibiru": {
+          "url": "https://gibiru.com/results.html?q=%s",
+          "short": "gi"
+        },
+        "Qwant Lite": {
+          "url": "https://lite.qwant.com/?q=%s",
+          "short": "ql"
+        },
+        "Swisscows": {
+          "url": "https://swisscows.com/en/web?query=%s",
+          "short": "ss"
+        },
+        "Searx redirect": {
+          "url": "https://searx.neocities.org/?q=%s",
+          "short": "x"
         },
       }
     },
