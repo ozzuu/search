@@ -357,5 +357,35 @@
         },
       }
     },
+    {
+      "name": "Freelancer",
+      "links": {
+        "Upwork freelancers": {
+          "url": "https://www.upwork.com/search/profiles/?q=%s",
+          "short": "upf"
+        },
+        "Upwork jobs": {
+          "url": "https://www.upwork.com/nx/jobs/search/?q=%s",
+          "short": "upj"
+        },
+        "Upwork projects": {
+          "url": "https://www.upwork.com/services/search?q=%s",
+          "short": "upp"
+        },
+        "Freelancer jobs": {
+          "url": "https://www.freelancer.com/jobs/?keyword=%s",
+          "short": "flj"
+        },
+      }
+    },
+    {
+      "name": "Jobs",
+      "links": {
+        "Remote JavaScript Jobs": {
+          "url": "https://jsremote.jobs/?search=%s",
+          "short": "rjj"
+        },
+      }
+    },
   ]
 }

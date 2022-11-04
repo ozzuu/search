@@ -1,6 +1,20 @@
 # Changelog
 
-## Version 1.1.0 (Nov 4, 2022)
+## Version 1.3.0 (Nov 4, 2022)
+
+- Added searches:
+  - Freelancer
+    - Upwork freelancers
+    - Upwork jobs
+    - Upwork projects
+    - Freelancer jobs
+  - Jobs
+    - Remote JavaScript Jobs
+- Fixed shorts override
+
+---
+
+## Version 1.2.0 (Nov 4, 2022)
 
 - Added custom config by sending a JSON to get params: `?{...}`
 

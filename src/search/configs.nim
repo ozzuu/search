@@ -66,7 +66,7 @@ proc mergeCustomConfig*(base: ConfigWithShorts; search: string): Config =
     when val is string:
       if val.len > 0:
         x = val
-    when val is int:
+    elif val is int:
       if val > 0:
         x = val
     else:
@@ -86,22 +86,23 @@ proc mergeCustomConfig*(base: ConfigWithShorts; search: string): Config =
 when isMainModule:
   import std/[json, jsonutils]
   let conf = loadConfig()
+  echo "short"
   let a = stdin.readLine
   var all = conf.mergeCustomConfig "?" & $(%*{
-    "default":{
-      "short": "asdasda"
-    },
+    # "default":{
+    #   "short": "asdasda"
+    # },
     "searches": [
       {
         "name": "Search Engines",
         "links": {
           "Github": {
             "url": "https://github.com/search?q=%s",
-            "short": "gh"
+            "short": "sd"
           },
-          a: {
+          "Githubs": {
             "url": "https://githubs.c/search?q=%s",
-            "short": "d"
+            "short": a
           },
         }
       }
