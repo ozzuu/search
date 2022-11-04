@@ -1,6 +1,6 @@
 # Package
 
-version       = "1.1.0"
+version       = "1.2.0"
 author        = "Ozzuu"
 description   = "Open source, secure and privacy friendly meta search portal"
 license       = "MIT"

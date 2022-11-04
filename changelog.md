@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 1.1.0 (Nov 4, 2022)
+
+- Added custom config by sending a JSON to get params: `?{...}`
+
+---
+
 ## Version 1.1.0 (Nov 1, 2022)
 
 - Added searches:

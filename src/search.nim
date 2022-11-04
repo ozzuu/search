@@ -9,9 +9,10 @@ include karax/prelude
 
 from pkg/util/forHtml import genClass
 
-from search/topics import loadConfig, SearchTopicLink
+from search/configs import loadConfig, mergeCustomConfig, SearchTopicLink
 
-const config = loadConfig()
+const base = loadConfig()
+let config = base.mergeCustomConfig decodeUrl $window.location.search
 
 
 template searchTerm: string =
@@ -68,7 +69,7 @@ proc drawAutoShort(search: string; data: SearchTopicLink): () -> VNode =
     result = buildHtml(main(class = "main")):
       h1: text fmt"Searching '{search}' in {data.name}"
 
-func getSearch(short: string): SearchTopicLink =
+proc getSearch(short: string): SearchTopicLink =
   for topic in config.searches:
     for (name, data) in topic.links:
       if data.short == short:

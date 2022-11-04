@@ -6,11 +6,11 @@ Open source, secure and privacy friendly meta search portal
 
 ## TODO
 
-- [ ] Settings (saved in GET parameters)
-  - [ ] Default search
-  - [ ] Delay to auto go to default
+- [x] Settings (saved in GET parameters)
+  - [x] Default search
+  - [x] Delay to auto go to default
   - [ ] Disable auto go to default
-  - [ ] Add custom searches
+  - [x] Add custom searches
   - [ ] Themes? Maybe in future
 
 ## License
