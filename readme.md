@@ -12,6 +12,7 @@ Open source, secure and privacy friendly meta search portal
   - [ ] Disable auto go to default
   - [x] Add custom searches
   - [ ] Themes? Maybe in future
+  - [ ] Remove referrer
 
 ## License
 

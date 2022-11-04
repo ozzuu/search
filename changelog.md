@@ -11,6 +11,7 @@
   - Jobs
     - Remote JavaScript Jobs
 - Fixed shorts override
+- Added noreferer in links but not worked
 
 ---
 

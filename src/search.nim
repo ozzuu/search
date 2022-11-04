@@ -59,9 +59,13 @@ proc drawSearchPage(): VNode =
                   href = data.url.query searchTerm,
                   `aria-label` = data.short,
                   `data-balloon-pos` = "up",
+                  content = "no-referrer"
                 ): b()
               else:
-                a(href = data.url.query searchTerm): b()
+                a(
+                  href = data.url.query searchTerm,
+                  content = "no-referrer"
+                ): b()
         hr()
 
 proc drawAutoShort(search: string; data: SearchTopicLink): () -> VNode =
