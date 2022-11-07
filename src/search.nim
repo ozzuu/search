@@ -120,7 +120,6 @@ proc defaultRedirect =
 
 when isMainModule:
   load hist
-  echo hist
   block autoShort:
     let term = searchTerm
     if term.len > 0:
