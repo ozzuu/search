@@ -16,5 +16,11 @@ requires "nim >= 1.6.4"
 requires "karax"
 requires "util"
 
+from std/os import `/`
+from std/strformat import fmt
+
+let outFile = binDir / bin[0] & ".js"
+
 task buildRelease, "Builds the release version":
   exec "nimble -d:danger --opt:speed build"
+  exec fmt"uglifyjs -o {outFile} {outFile}"
