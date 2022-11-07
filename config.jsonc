@@ -284,6 +284,36 @@
       }
     },
     {
+      "name": "Extensions marketplace",
+      "links": {
+        "VSCode Extensions": {
+          "url": "https://marketplace.visualstudio.com/search?target=VSCode&term=%s",
+          "short": "vsix"
+        },
+        "Firefox Addons": {
+          "url": "https://addons.mozilla.org/en-US/firefox/search/?q=%s",
+          "short": "ffa"
+        },
+        "Chrome Webstore": {
+          "url": "https://chrome.google.com/webstore/search/%s",
+          "short": "cw"
+        },
+      }
+    },
+    {
+      "name": "Software comparator",
+      "links": {
+        "AlternativeTo": {
+          "url": "https://alternativeto.net/browse/search/?q=%ss",
+          "short": "at"
+        },
+        "Slant": {
+          "url": "https://www.slant.co/search?query=%s",
+          "short": "sl"
+        },
+      }
+    },
+    {
       "name": "Others",
       "links": {
         "BluesoftCosmos": {
@@ -293,10 +323,6 @@
         "Rastreamento Correio": {
           "url": "https://rastreamentocorreios.info/consulta/%s",
           "short": "rc"
-        },
-        "Chrome Webstore": {
-          "url": "https://chrome.google.com/webstore/search/%s",
-          "short": "cw"
         },
         "Google Maps": {
           "url": "https://www.google.com/maps/search/%s",

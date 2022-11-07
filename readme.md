@@ -13,6 +13,7 @@ Open source, secure and privacy friendly meta search portal
   - [x] Add custom searches
   - [ ] Themes? Maybe in future
   - [ ] Remove referrer
+- [ ] Add option to remove item from history
 
 ## License
 

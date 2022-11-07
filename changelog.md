@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 2.0.0 (Monday Nov 7, 22)
+
+- Added searches:
+  - Extensions marketplace
+    - VSCode Extensions
+    - Firefox Addons
+    - Chrome Webstore
+  - Software comparator
+    - AlternativeTo
+    - Slant
+- Added local storage search history
+
+---
+
 ## Version 1.3.0 (Nov 4, 2022)
 
 - Added searches:

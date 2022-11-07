@@ -1,5 +1,5 @@
 # from std/dom import window
-import std/dom
+import std/dom except Event
 from std/uri import encodeUrl, decodeUrl
 from std/strutils import replace, strip, join, split
 from std/sugar import `->`
@@ -10,6 +10,7 @@ include karax/prelude
 from pkg/util/forHtml import genClass
 
 from search/configs import loadConfig, mergeCustomConfig, SearchTopicLink
+import search/history
 
 const base = loadConfig()
 let config = base.mergeCustomConfig decodeUrl $window.location.search
@@ -38,9 +39,14 @@ proc drawSearchPage(): VNode =
     header(class = genClass({"top": searchTerm.len > 0})):
       h1: text "Ozzuu Search"
       tdiv(class = "input"):
-        input(`type` = "text", placeholder = "Search term", value = searchTerm):
+        input(`type` = "text", placeholder = "Search term", value = searchTerm,
+          list = "history", autofocus = ""):
           proc onInput(ev: Event; n: VNode) =
             window.location.hash = cstring n.value
+        datalist(id = "history"):
+          for i in countdown(hist.len - 1, 0):
+            let item = hist[i]
+            option(value = item.value)
     section(class = genClass({"topics": true, "hidden": searchTerm.len == 0})):
       for topic in config.searches:
         tdiv(class = "topic"):
@@ -53,18 +59,28 @@ proc drawSearchPage(): VNode =
                   "cancelled": defaultCancelled
                 }))):
                   text name
+              proc clickLink(ev: Event; n: VNode) {.closure.} =
+                let short = n.getAttr "aria-label"
+                var term = searchTerm
+                if short.len > 0:
+                  term = fmt"{short} {term}"
+                discard hist.del term
+                hist.add term
+                save hist
 
               if data.short.len > 0:
                 a(
                   href = data.url.query searchTerm,
                   `aria-label` = data.short,
                   `data-balloon-pos` = "up",
-                  content = "no-referrer"
+                  content = "no-referrer",
+                  onclick = clickLink
                 ): b()
               else:
                 a(
                   href = data.url.query searchTerm,
-                  content = "no-referrer"
+                  content = "no-referrer",
+                  onclick = clickLink
                 ): b()
         hr()
 
@@ -86,6 +102,10 @@ proc defaultRedirect =
       let srx = config.default.short.getSearch
       if srx.name.len > 0:
         let timeout = setTimeout((proc() =
+          let fullTerm = fmt"{config.default.short} {term}"
+          discard hist.del fullTerm
+          hist.add fullTerm
+          save hist
           gotoUrl srx.data.url.query term
         ), config.default.delay)
         let cancelProc = proc(ev: Event) =
@@ -99,6 +119,8 @@ proc defaultRedirect =
         document.onmousemove = cancelProc
 
 when isMainModule:
+  load hist
+  echo hist
   block autoShort:
     let term = searchTerm
     if term.len > 0:
@@ -108,8 +130,11 @@ when isMainModule:
         short = parts[0]
       let srx = short.getSearch
       if srx.name.len > 0:
+        discard hist.del term
+        hist.add term
+        save hist
         setRenderer drawAutoShort(search, srx)
-        window.location.hash = search
+        window.location.hash = cstring search
         gotoUrl srx.data.url.query search
         quit 0
 
