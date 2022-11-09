@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 2.1.0 (Wednesday Nov 9, 22)
+
+- Added searches:
+  - English Dictionary
+    - Merriam-Webster
+    - Dictionary
+  - Portuguese Dictionary
+    - Dicio
+    - Linguee pt->en
+
+---
+
 ## Version 2.0.0 (Monday Nov 7, 22)
 
 - Added searches:

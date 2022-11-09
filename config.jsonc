@@ -152,6 +152,32 @@
       }
     },
     {
+      "name": "English Dictionary",
+      "links": {
+        "Merriam-Webster": {
+          "url": "https://www.merriam-webster.com/dictionary/%s",
+          "short": "mw"
+        },
+        "Dictionary": {
+          "url": "https://www.dictionary.com/misspelling?term=%s",
+          "short": "dc"
+        },
+      }
+    },
+    {
+      "name": "Portuguese Dictionary",
+      "links": {
+        "Dicio": {
+          "url": "https://www.dicio.com.br/pesquisa.php?q=%s",
+          "short": "cio"
+        },
+        "Linguee pt->en": {
+          "url": "https://www.linguee.com.br/portugues-ingles/search?query=gjh%s",
+          "short": "sg"
+        },
+      }
+    },
+    {
       "name": "Price comparator",
       "links": {
         "Zoom": {

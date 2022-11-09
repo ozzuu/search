@@ -133,7 +133,6 @@ when isMainModule:
         hist.add term
         save hist
         setRenderer drawAutoShort(search, srx)
-        window.location.hash = cstring search
         gotoUrl srx.data.url.query search
         quit 0
 

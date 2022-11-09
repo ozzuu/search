@@ -14,6 +14,7 @@ Open source, secure and privacy friendly meta search portal
   - [ ] Themes? Maybe in future
   - [ ] Remove referrer
 - [ ] Add option to remove item from history
+- [ ] Enter go to short (like in page loading) or reload
 
 ## License
 
