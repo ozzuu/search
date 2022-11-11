@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 2.2.0 (Friday Nov 11, 22)
+
+- Added searches:
+  - Piracy
+    - Sanet
+    - The Pirate Bay
+
+---
+
 ## Version 2.1.0 (Wednesday Nov 9, 22)
 
 - Added searches:

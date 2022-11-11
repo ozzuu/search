@@ -178,6 +178,19 @@
       }
     },
     {
+      "name": "Piracy",
+      "links": {
+        "Sanet": {
+          "url": "https://sanet.st/search/?q=%s",
+          "short": "sa"
+        },
+        "The Pirate Bay": {
+          "url": "https://thepiratebay.org/search.php?q=%s",
+          "short": "tpb"
+        },
+      }
+    },
+    {
       "name": "Price comparator",
       "links": {
         "Zoom": {
