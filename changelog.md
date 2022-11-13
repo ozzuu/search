@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 2.3.0 (Sunday Nov 13, 22)
+
+- Added searches:
+  - Others
+    - Consulta CNPJ
+    - Reclame Aqui
+
+---
+
 ## Version 2.2.0 (Friday Nov 11, 22)
 
 - Added searches:

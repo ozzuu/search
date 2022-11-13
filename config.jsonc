@@ -371,6 +371,14 @@
           "url": "https://www.situacaocadastral.info/cnpj/%s",
           "short": "sc"
         },
+        "Consulta CNPJ": {
+          "url": "https://consultacnpj.dev/?q=%s",
+          "short": "cc"
+        },
+        "Rechame Aqui": {
+          "url": "https://www.reclameaqui.com.br/busca/?q=%s",
+          "short": "rq"
+        },
       }
     },
     {
