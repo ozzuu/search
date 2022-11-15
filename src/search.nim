@@ -120,22 +120,23 @@ proc defaultRedirect =
 
 when isMainModule:
   load hist
-  block autoShort:
-    let term = searchTerm
-    if term.len > 0:
-      let
-        parts = term.strip.split " "
-        search = parts[1..^1].join " "
-        short = parts[0]
-      let srx = short.getSearch
-      if srx.name.len > 0:
-        discard hist.del term
-        hist.add term
-        save hist
-        setRenderer drawAutoShort(search, srx)
-        gotoUrl srx.data.url.query search
-        quit 0
+  block main:
+    block autoShort:
+      let term = searchTerm
+      if term.len > 0:
+        let
+          parts = term.strip.split " "
+          search = parts[1..^1].join " "
+          short = parts[0]
+        let srx = short.getSearch
+        if srx.name.len > 0:
+          discard hist.del term
+          hist.add term
+          save hist
+          setRenderer drawAutoShort(search, srx)
+          gotoUrl srx.data.url.query search
+          break main
 
-  setRenderer drawSearchPage
-  
-  defaultRedirect()
+    setRenderer drawSearchPage
+
+    defaultRedirect()

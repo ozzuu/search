@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 2.3.1 (Tuesday Nov 15, 22)
+
+- Fixed `drawAutoShort` drawing
+
+---
+
 ## Version 2.3.0 (Sunday Nov 13, 22)
 
 - Added searches:
