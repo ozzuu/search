@@ -323,6 +323,15 @@
       }
     },
     {
+      "name": "Documents",
+      "links": {
+        "Idoc Pub": {
+          "url": "https://idoc.pub/search/%s",
+          "short": "id"
+        },
+      }
+    },
+    {
       "name": "Extensions marketplace",
       "links": {
         "VSCode Extensions": {

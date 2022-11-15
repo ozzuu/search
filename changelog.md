@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 2.4.0 (Tuesday Nov 15, 22)
+
+- Added `idoc.pub`
+
+---
+
 ## Version 2.3.1 (Tuesday Nov 15, 22)
 
 - Fixed `drawAutoShort` drawing
