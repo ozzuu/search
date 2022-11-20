@@ -4,6 +4,16 @@ Ozzuu Search is a frontend-only web page that helps you search across multiple w
 
 Open source, secure and privacy friendly meta search portal
 
+## Features
+
+- Free and open source
+- Local search history saved in local storage
+- Customizable config, can add custom searches and custom default search
+- Made with Nim :)
+- No need to export all your search engines to another browser, just copy the link
+- Short commands automatically redirect
+- Easy and clean UI
+
 ## TODO
 
 - [x] Settings (saved in GET parameters)

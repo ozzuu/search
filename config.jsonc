@@ -81,9 +81,13 @@
           "url": "https://piped.kavin.rocks/results?search_query=%s",
           "short": "pi"
         },
-        "invidious": {
-          "url": "https://invidious.kavin.rocks/search?q=%s",
+        "invidious yewtu.be": {
+          "url": "https://yewtu.be/search?q=%s",
           "short": "iv"
+        },
+        "invidious kavin.rocks": {
+          "url": "https://invidious.kavin.rocks/search?q=%s",
+          "short": "ivk"
         },
         "Youtube": {
           "url": "https://www.youtube.com/results?search_query=%s",
@@ -143,9 +147,13 @@
       }
     },
     {
-      "name": "Text",
+      "name": "Translation",
       "links": {
-        "Google Translate": {
+        "Lingva Translate (auto->en)": {
+          "url": "https://lingva.ml/auto/en/%s",
+          "short": "li"
+        },
+        "Google Translate (auto->en)": {
           "url": "https://translate.google.com/?sl=auto&tl=en&text=%s&op=translate",
           "short": "gt"
         },
