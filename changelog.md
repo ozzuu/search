@@ -1,12 +1,18 @@
 # Changelog
 
+## Version 2.5.1 (6w 2d 2m 2023y)
+
+- Fixed auto redirect message showing
+
+---
+
 ## Version 2.5.0 (Sunday Nov 20, 22)
 
 - Added `yewtu.be`
 - Added `lingva.ml`
 
-
 ---
+
 ## Version 2.4.0 (Tuesday Nov 15, 22)
 
 - Added `idoc.pub`

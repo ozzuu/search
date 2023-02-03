@@ -134,6 +134,7 @@ when isMainModule:
           hist.add term
           save hist
           setRenderer drawAutoShort(search, srx)
+          redraw()
           gotoUrl srx.data.url.query search
           break main
 
