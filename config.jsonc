@@ -75,6 +75,15 @@
       }
     },
     {
+      "name": "Bible",
+      "links": {
+        "Bible Tools": {
+          "url": "https://tools.ozzuu.com/bible/#%s"
+          "short": "bt"
+        }
+      }
+    },
+    {
       "name": "Video",
       "links": {
         "Piped": {
