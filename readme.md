@@ -4,6 +4,9 @@ Ozzuu Search is a frontend-only web page that helps you search across multiple w
 
 Open source, secure and privacy friendly meta search portal
 
+![Clean state](images/clean.png)
+![Search state](images/search.png)
+
 ## Features
 
 - Free and open source
