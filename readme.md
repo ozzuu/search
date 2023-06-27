@@ -1,11 +1,19 @@
-# Ozzuu Search
+<div align=center>
 
-Ozzuu Search is a frontend-only web page that helps you search across multiple websites!
+# **Ozzuu Search**
 
-Open source, secure and privacy friendly meta search portal
+#### Open source, secure and privacy friendly meta search portal
+
+**[About](#about) - [Features](#features)** - [License](#license)
+
+</div>
 
 ![Clean state](images/clean.png)
 ![Search state](images/search.png)
+
+## About
+
+Ozzuu Search is a frontend-only web page that helps you search across multiple websites!
 
 ## Features
 
@@ -31,4 +39,4 @@ Open source, secure and privacy friendly meta search portal
 
 ## License
 
-MIT
+This website is free and open source software licensed over MIT license.
