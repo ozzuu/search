@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 2.6.0 (2023/06/27)
+
+- Changed color theme to darker
+
 ## Version 2.5.1 (6w 2d 2m 2023y)
 
 - Fixed auto redirect message showing
