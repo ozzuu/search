@@ -39,4 +39,4 @@ Ozzuu Search is a frontend-only web page that helps you search across multiple w
 
 ## License
 
-This website is free and open source software licensed over MIT license.
+This software is FOSS, licensed over GPL-3.

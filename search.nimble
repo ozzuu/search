@@ -3,7 +3,7 @@
 version       = "2.6.0"
 author        = "Ozzuu"
 description   = "Open source, secure and privacy friendly meta search portal"
-license       = "MIT"
+license       = "GPL-3.0"
 srcDir        = "src"
 bin           = @["search"]
 binDir = "public/script"
