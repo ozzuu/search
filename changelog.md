@@ -1,5 +1,9 @@
 # Changelog
 
+## (2024/02/07)
+
+- Added `4Get`,  `4Get (ggtyler)`, `SearXNG (ggtyler)`, `searchcode` and `TLD-List`
+
 ## Version 2.6.0 (2023/06/27)
 
 - Changed color theme to darker

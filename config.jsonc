@@ -7,6 +7,18 @@
     {
       "name": "Search Engines",
       "links": {
+        "4Get": {
+          "url": "https://4get.ca/web?s=%s",
+          "short": "4"
+        },
+        "4Get (ggtyler)": {
+          "url": "https://nyc1.4g.ggtyler.dev/web?s=%s",
+          "short": "4g"
+        },
+        "SearXNG (ggtyler)": {
+          "url": "https://nyc1.sx.ggtyler.dev/search?q=%s",
+          "short": "sx"
+        },
         "Duckduckgo html": {
           "url": "https://html.duckduckgo.com/html/?q=%s",
           "short": "d"
@@ -44,6 +56,10 @@
     {
       "name": "Code",
       "links": {
+        "searchcode": {
+          "url": "https://searchcode.com/?q=%s",
+          "short": "sc"
+        },
         "Github": {
           "url": "https://github.com/search?q=%s",
           "short": "gh"
@@ -78,7 +94,7 @@
       "name": "Bible",
       "links": {
         "Bible Tools": {
-          "url": "https://tools.ozzuu.com/bible/#%s"
+          "url": "https://tools.ozzuu.com/bible/#%s",
           "short": "bt"
         }
       }
@@ -395,7 +411,7 @@
         },
         "Situação Cadastral": {
           "url": "https://www.situacaocadastral.info/cnpj/%s",
-          "short": "sc"
+          "short": "sit"
         },
         "Consulta CNPJ": {
           "url": "https://consultacnpj.dev/?q=%s",
@@ -428,6 +444,10 @@
     {
       "name": "Domain tools",
       "links": {
+        "TLD-List": {
+          "url": "https://tld-list.com/?q=%s",
+          "short": "tld"
+        },
         "DomainTools Whois": {
           "url": "https://whois.domaintools.com/%s",
           "short": "dtw"
@@ -457,7 +477,7 @@
       }
     },
     {
-      "name": "Freelancer",
+      "name": "Freelancing",
       "links": {
         "Upwork freelancers": {
           "url": "https://www.upwork.com/search/profiles/?q=%s",
